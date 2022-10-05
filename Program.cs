@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Collections
@@ -12,6 +13,7 @@ namespace Collections
             // List<T> -> class
             // T -> Object
 
+/*
             List<int> numberList = new List<int>();
 
             numberList.Add(42);
@@ -112,9 +114,34 @@ namespace Collections
                 Console.WriteLine(user.Soyisim);
                 Console.WriteLine(user.Yas);
             }
+*/
+
+            // ArrayList
+            // using System.Collections
+
+            ArrayList list = new ArrayList();
+            list.Add("Ayşe");
+            list.Add(2);
+            list.Add(true);
+            
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);                
+            }
+            
+            // AddRange Method
+            string[] colors = {"kirmizi", "sari", "mavi", "mor"};
+            List<int> numbers = new List<int>(){2,4,14,3,42};
+
+            list.AddRange(colors);
+            list.AddRange(numbers);
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);                
+            }
         }
     }
-
+/*
     public class Users
     {
         private string isim;
@@ -129,4 +156,6 @@ namespace Collections
 
         
     }
+*/
+
 }
